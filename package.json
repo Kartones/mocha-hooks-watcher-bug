@@ -1,12 +1,9 @@
 {
-  "name": "mocha-watch-bug",
+  "name": "mocha-hooks-watcher-bug",
   "version": "0.0.0",
-  "license": "UNLICENSED",
+  "license": "UNLICENSE",
   "private": true,
   "packageManager": "pnpm@8.15.3",
-  "scripts": {
-    "test:unit:mocha": "NODE_ENV=test mocha --exit"
-  },
   "dependencies": {},
   "devDependencies": {
     "mocha": "10.4.0"
