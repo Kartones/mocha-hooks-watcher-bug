@@ -1,3 +1,11 @@
+## Intro
+
+When using `mochaHooks` in watch mode, it seems that something gets in the way if you have module variables when reloading, making those lose any changes (e.g. storing values on their properties) on watch reloads. Behaviour is fine on first run.
+
+`a.js` keeps an instance inside itself of `A`. From the `beforeEach()` hook (at `hooks.js`), we store some strings into that `a`. `test/failing.test.js` relies on those populated items (accessed via an instance of `B`, which pulls `a`), meanwhile `test/working.test.js` contains its own `beforeEach()` hook, which makes it work all times.
+
+`main.js` is present just to showcase a single-file all logic together example, can be dismissed.
+
 ## STR
 
 1. Run
